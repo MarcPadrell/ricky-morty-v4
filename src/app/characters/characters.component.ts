@@ -8,12 +8,19 @@ import { CharactersService } from '../characters.service';
 })
 export class CharactersComponent implements OnInit {
 
-  personajes: any = null;
+  characterService: CharactersService;
+  characters: any = null;
 
-  constructor(private personajesService: CharactersService) { }
+  constructor(private characterServicio: CharactersService) {
+
+    this.characterService = characterServicio;
+
+  }
 
   ngOnInit(): void {
-    this.personajes=this.personajesService.retornar();
+
+    this.characters = this.characterServicio.getCharacters();
+
   }
 
 }

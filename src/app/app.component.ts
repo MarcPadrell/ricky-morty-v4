@@ -6,17 +6,15 @@ import { CharactersService } from './characters.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'ricky-morty-v2';
 
-  characters:any = null;
 
-  constructor(private charactersServicio: CharactersService){
+  constructor() {
 
   }
 
-  ngOnInit(){
-    this.characters=this.charactersServicio.retornar();
+  ngOnInit() {
   }
 
 }

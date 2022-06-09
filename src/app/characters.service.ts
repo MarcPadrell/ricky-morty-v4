@@ -5,10 +5,11 @@ import { Injectable } from '@angular/core';
 })
 export class CharactersService {
 
-  constructor() { }
+  charaters: any = null;
+  character: any = null;
 
-  retornar() {
-    return [
+  constructor() {
+    this.charaters = [
       {
         "id": 1,
         "name": "Rick Sanchez",
@@ -39,16 +40,6 @@ export class CharactersService {
         "image": "https://rickandmortyapi.com/api/character/avatar/3.jpeg"
       },
       {
-        "id": 4,
-        "name": "Beth Smith",
-        "status": "Dead",
-        "species": "Human",
-        "gender": "Female",
-        "origin": "Earth (Replacement Dimension)",
-        "location": "Earth",
-        "image": "https://rickandmortyapi.com/api/character/avatar/4.jpeg"
-      },
-      {
         "id": 5,
         "name": "Jerry Smith",
         "status": "Dead",
@@ -57,8 +48,46 @@ export class CharactersService {
         "origin": "Earth (Replacement Dimension)",
         "location": "Earth",
         "image": "https://rickandmortyapi.com/api/character/avatar/5.jpeg"
+      },
+      {
+        "id": 4,
+        "name": "Beth Smith",
+        "status": "Dead",
+        "species": "Human",
+        "gender": "Female",
+        "origin": "Earth (Replacement Dimension)",
+        "location": "Earth",
+        "image": "https://rickandmortyapi.com/api/character/avatar/4.jpeg"
       }
-    ]
-  }
-}
 
+    ];
+
+  }
+
+  getCharacters() {
+
+    return this.charaters;
+
+  }
+
+  getCharacterId(id: number) {
+
+    for (const character of this.charaters) {
+      if (character.id === id) {
+
+        return character;
+
+      }
+    }
+
+  }
+
+  getCharacter() {
+    return this.character;
+  }
+
+  setCharacter(id: number) {
+    this.character = this.getCharacterId(id);
+  }
+
+}

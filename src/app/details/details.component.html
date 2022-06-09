@@ -1,0 +1,24 @@
+
+<div class="container-fluid marketing" *ngIf="character!=null; else espera">
+
+  <hr class="featurette-divider d-flex justify-content-center">
+
+  <div class="row featurette m-5 d-flex justify-content-center">
+    <div class="col-md-5 order-md-2">
+      <h2 class="featurette-heading fw-normal">{{character.name}}</h2>
+      <p class="lead" style="display:block">Status: {{character.status}}</p>
+      <p class="lead" style="display:block">Species: {{character.species}}</p>
+      <p class="lead" style="display:block">Gender: {{character.gender}}</p>
+      <p class="lead" style="display:block">Origin: {{character.origin}}</p>
+      <p class="lead" style="display:block">Location: {{character.location}}</p>
+    </div>
+    <div class="col-md-4 order-md-1">
+      <img src="{{character.image}}" alt="">
+    </div>
+  </div>
+
+  <hr class="featurette-divider d-flex justify-content-center">
+
+</div>
+
+<ng-template #espera>Esperando datos...</ng-template>
