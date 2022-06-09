@@ -1,0 +1,15 @@
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-md-4 m-5 justify-content-between align-items-center" *ngIf="personajes!=null; else espera">
+  <div class="card m-3" style="width: 300px;" *ngFor="let char of personajes">
+    <img src="{{char.image}}" class="card-img-top" alt="">
+    <div class="card-body m-2">
+      <p class="card-text" style="font-size: 20px;">{{char.name}}</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group w-100">
+          <button type="button" class="btn btn-sm btn-warning p-2 pe-5 ps-5">See more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #espera>Esperando datos...</ng-template>
