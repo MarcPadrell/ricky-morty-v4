@@ -1,3 +1,3 @@
-# RickyMortyV2
+# RickyMortyV3
 
-![image](https://user-images.githubusercontent.com/79224406/172817665-52a6417f-c4ac-49b8-8357-c67601727877.png)
+![image](https://user-images.githubusercontent.com/79224406/172830824-c8a78f07-ba3b-4a06-af5c-8f61c4dee5b6.png)
