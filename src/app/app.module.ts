@@ -1,4 +1,3 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +8,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { DetailsComponent } from './details/details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
+import { AddCharacterComponent } from './add-character/add-character.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     CharactersComponent,
     AboutUsComponent,
-    DetailsComponent
+    DetailsComponent,
+    AddCharacterComponent
   ],
   imports: [
     BrowserModule,
