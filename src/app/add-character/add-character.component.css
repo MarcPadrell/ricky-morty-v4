@@ -1,5 +1,13 @@
-.submit-form
+.form-group
 {
+  margin: 10px;
   max-width: 400px;
-  margin: auto;
+}
+
+form{
+  margin: 20px;
+}
+
+.btn{
+  margin-left: 68px;
 }

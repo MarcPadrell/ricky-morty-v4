@@ -1,40 +1,56 @@
-<div>
-  <div class="submit-form">
+<form>
     <div *ngIf="!submitted">
-      <div class="form-group">
-        <label for="title">Name</label>
-        <input type="text" class="from-contorl" id="name" required [(ngModel)]="character.name" name="name" />
+      <div class="form-group row">
+        <label for="title" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="from-control" id="name" required [(ngModel)]="character.name" name="name" />
+        </div>
       </div>
-      <div class="form-group">
-        <label for="title">Status</label>
-        <input type="text" class="from-contorl" id="status" required [(ngModel)]="character.status" name="status" />
+      <div class="form-group row">
+        <label for="title" class="col-sm-2 col-form-label">Status</label>
+        <div class="col-sm-10">
+          <input type="text" class="from-control" id="name" required [(ngModel)]="character.status" name="status" />
+        </div>
       </div>
-      <div class="form-group">
-        <label for="title">Species</label>
-        <input type="text" class="from-contorl" id="species" required [(ngModel)]="character.species" name="title" />
+      <div class="form-group row">
+        <label for="title" class="col-sm-2 col-form-label">Species</label>
+        <div class="col-sm-10">
+          <input type="text" class="from-control" id="name" required [(ngModel)]="character.species" name="species" />
+        </div>
       </div>
-      <div class="form-group">
-        <label for="title">Gender</label>
-        <input type="text" class="from-contorl" id="gender" required [(ngModel)]="character.gender" name="title" />
+      <div class="form-group row">
+        <label for="title" class="col-sm-2 col-form-label">Gender</label>
+        <div class="col-sm-10">
+          <input type="text" class="from-control" id="name" required [(ngModel)]="character.gender" name="gender" />
+        </div>
       </div>
-      <div class="form-group">
-        <label for="title">Origin</label>
-        <input type="text" class="from-contorl" id="origin" required [(ngModel)]="character.origin" name="title" />
+      <div class="form-group row">
+        <label for="title" class="col-sm-2 col-form-label">Origin</label>
+        <div class="col-sm-10">
+          <input type="text" class="from-control" id="name" required [(ngModel)]="character.origin" name="origin" />
+        </div>
       </div>
-      <div class="form-group">
-        <label for="description">Location</label>
-        <input class="from-contorl" id="description" required [(ngModel)]="character.location" name="description" />
+      <div class="form-group row">
+        <label for="title" class="col-sm-2 col-form-label">Location</label>
+        <div class="col-sm-10">
+          <input type="text" class="from-control" id="name" required [(ngModel)]="character.location" name="location" />
+        </div>
       </div>
-      <div class="form-group">
-        <label for="description">Image</label>
-        <input class="from-contorl" id="description" required [(ngModel)]="character.image" name="image" />
+      <div class="form-group row">
+        <label for="title" class="col-sm-2 col-form-label">Image</label>
+        <div class="col-sm-10">
+          <input type="text" class="from-control" id="name" required [(ngModel)]="character.image" name="image" />
+        </div>
       </div>
-      <button (click)="saveCharacter()" class="btn btn-success">Submit</button>
+      <div class="form-group row">
+        <div class="col-sm-8">
+          <button (click)="saveCharacter()" class="btn btn-success">Submit</button>        </div>
+      </div>
+
     </div>
 
     <div *ngIf="submitted" >
       <h4>Character ADDED!</h4>
       <button class="btn btn-success" (click)="newCharacter()">Add</button>
     </div>
-  </div>
-</div>
+</form>
