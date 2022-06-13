@@ -48,6 +48,25 @@
       "origin": "Earth (Replacement Dimension)",
       "location": "Earth",
       "image": "https://rickandmortyapi.com/api/character/avatar/5.jpeg"
+    },
+    {
+      "name": "Pala",
+      "status": "Ester",
+      "species": "Arna",
+      "gender": "Arrels",
+      "origin": "Posit",
+      "location": "Carlos",
+      "id": 6
+    },
+    {
+      "name": "asf",
+      "status": "asfd",
+      "species": "fsadf",
+      "gender": "sadf",
+      "origin": "sdf",
+      "location": "sdf",
+      "image": "asdf",
+      "id": 7
     }
   ]
 }

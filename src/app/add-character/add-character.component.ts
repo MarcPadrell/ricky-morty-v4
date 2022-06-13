@@ -34,6 +34,7 @@ export class AddCharacterComponent implements OnInit {
       gender: this.character.gender,
       origin: this.character.origin,
       location: this.character.location,
+      image: this.character.image,
     };
 
     this.charactersService.create(data).subscribe(
@@ -53,6 +54,7 @@ export class AddCharacterComponent implements OnInit {
       gender: '',
       origin: '',
       location: '',
+      image: ''
     };
   }
 

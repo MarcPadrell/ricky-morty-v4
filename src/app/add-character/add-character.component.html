@@ -25,11 +25,15 @@
         <label for="description">Location</label>
         <input class="from-contorl" id="description" required [(ngModel)]="character.location" name="description" />
       </div>
+      <div class="form-group">
+        <label for="description">Image</label>
+        <input class="from-contorl" id="description" required [(ngModel)]="character.image" name="image" />
+      </div>
       <button (click)="saveCharacter()" class="btn btn-success">Submit</button>
     </div>
 
     <div *ngIf="submitted" >
-      <h4> Tutorial was submited blabla</h4>
+      <h4>Character ADDED!</h4>
       <button class="btn btn-success" (click)="newCharacter()">Add</button>
     </div>
   </div>
