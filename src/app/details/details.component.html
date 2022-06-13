@@ -1,23 +1,30 @@
-<div class="container-fluid marketing" *ngIf="character!=null; else espera">
+<div class="list row">
+  <div class="col-md-12">
+      <h4>Character List</h4>
 
-  <hr class="featurette-divider d-flex justify-content-center">
+      <table class="table m-3">
+          <thead>
+              <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Title</th>
+                  <th scope="col">Description</th>
+                  <th scope="col" style="min-width: 150px;">Action</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let char of characters;">
+                  <th scope="row">{{char.id}}</th>
+                  <td><b>{{char.name}}</b></td>
+                  <td>{{char.species}}</td>
+                  <td>
+                      <button type="button" class="btn btn-danger" routerLink="/book/{{char.id}}">Edit</button>
+                      <button type="button" class="btn btn-warning" (click)="deleteCharacter()">Delete</button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
 
-  <div class="row featurette m-5 d-flex justify-content-center">
-    <div class="col-md-5 order-md-2">
-      <h2 class="featurette-heading fw-normal">{{character.name}}</h2>
-      <p class="lead" style="display:block">Status: {{character.status}}</p>
-      <p class="lead" style="display:block">Species: {{character.species}}</p>
-      <p class="lead" style="display:block">Gender: {{character.gender}}</p>
-      <p class="lead" style="display:block">Origin: {{character.origin.name}}</p>
-      <p class="lead" style="display:block">Location: {{character.location.name}}</p>
-    </div>
-    <div class="col-md-4 order-md-1">
-      <img src="{{character.image}}" alt="">
-    </div>
   </div>
-
-  <hr class="featurette-divider d-flex justify-content-center">
-
 </div>
 
 <ng-template #espera>
